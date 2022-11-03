@@ -1,17 +1,11 @@
 extends layout
 
 block content
+  block content
   h1= title
-  p Welcome to #{title}
-  p welcome to node assignment
-  button(type="button",class="btn btn-primary") Press Me 
-  div(id="bump") Bump the count
-   script.
-    var count=0;
-    var bump=1;
-    function doBump() {
-      count=count+bump;
-      bump=bump+1;
-      document.getElementById("bump").innerHTML=`Count ${count} with bump ${bump}.`;
-    }
-    a(href="http://localhost:3000/Boats") Boats
+  - var image_names = ["sail_powered_boats.jpg","powered_boats.jpg","motor_boats.jpg"];
+  - for(i=0;i<3;i++) {
+     - var randNum = Math.floor(Math.random()*5) ;
+     img(src=`./images/${image_names[randNum]}` alt=`img${image_names[randNum]}` style='width:300px; height:300px;')
+
+  -}
