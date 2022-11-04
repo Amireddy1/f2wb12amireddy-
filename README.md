@@ -1,5 +1,5 @@
 # f2wb12amireddy-
-This is my second assignment using node.
+Happy to learn mongoDB.
 
 Boats
 -BoatsTypes(String)
